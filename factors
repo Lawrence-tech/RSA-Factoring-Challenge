@@ -7,7 +7,7 @@ try:
     if len(sys.argv) > 1:
         with open(sys.argv[1], "r") as nf:
             try:
-                numbers = [int(L) for L in nf.readlines()]
+                numbers = [int(i) for i in nf.readlines()]
             except Exception:
                 pass
 except Exception:
