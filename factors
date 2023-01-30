@@ -1,24 +1,5 @@
 #!/usr/bin/python3
-import sys
+from factors_functions import *
+if __name__ = '__main__':
 
-
-numbers = []
-try:
-    if len(sys.argv) > 1:
-        with open(sys.argv[1], "r") as nf:
-            try:
-                numbers = [int(i) for i in nf.readlines()]
-            except Exception:
-                pass
-except Exception:
-    pass
-
-
-for n in numbers:
-    p = q = 1
-    step = n % 2 + 1
-    while p == 1 and q < n:
-        q = q + step
-        if n % q == 0:
-            p = n // q
-    print(f"{n}= {p}*{q}")
+    print(unix_time(print_factors))
